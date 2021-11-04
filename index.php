@@ -12,14 +12,7 @@
     <link href="css/price-range.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
-	
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-
-    
+	<link href="css/responsive.css" rel="stylesheet">   
 </head><!--/head-->
 <?php
 Session_Start();
@@ -84,7 +77,7 @@ include_once("connection.php");
 					<div class="col-sm-9">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
+								<span class="sr-only"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
