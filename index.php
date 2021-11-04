@@ -94,7 +94,6 @@ include_once("connection.php");
 										<li><a href="?page=product_management"> Search Product </a></li>  
                                     </ul>
                                 </li>
-								
 						</div>
 						<div class="container">
 		
@@ -118,9 +117,6 @@ include_once("connection.php");
 			elseif($page=="login"){
 				include_once("Login.php");
 			}
-			elseif($page=="category_management"){
-				include_once("Category_Management.php");
-			}
 			elseif($page=="product_management"){
 				include_once("Search_Product.php");
 			}
@@ -135,9 +131,6 @@ include_once("connection.php");
 			}
 			else if($page=="logout") {
 				include_once("Logout.php");
-			}
-			else if($page=="Add_Category") {
-				include_once("Add_Category.php");
 			}
 			else if($page=="update_customer") {
 				include_once("Update_customer.php");
