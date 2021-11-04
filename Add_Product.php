@@ -12,12 +12,12 @@
 	<script type="text/javascript" src="scripts/ckeditor/ckeditor.js"></script>
 	<?php
 	include_once("connection.php");
-	function bind_Category_List($conn){
-		$sqlstring = "SELECT Cat_ID, Cat_Name from category";
-		$result = mysqli_query($conn, $sqlstring);
-		echo "<SELECT name='CategoryList' class='form-control'>
+	function bind_Category($conn){
+		$sqlstring = "SELECT cateid, catename from category";
+		$result =pg_query($conn, $sqlstring);
+		echo "<SELECT name='category' class='form-control'>
 		<option value='0'>Choose Category, please!</option>";
-		while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+		while ($row = pg_fetch_array($result, MYSQLI_ASSOC)){
 			echo "<option value='".$row['Cat_ID']."'>".$row['Cat_Name']."</option>";
 		}
 		echo "</select>";
