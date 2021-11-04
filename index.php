@@ -118,6 +118,12 @@ include_once("connection.php");
 				include_once("Login.php");
 			}
 			elseif($page=="product_management"){
+				include_once("Add_Category.php");
+			}
+			elseif($page=="product_management"){
+				include_once("Category_Management.php");
+			}
+			elseif($page=="product_management"){
 				include_once("Search_Product.php");
 			}
 			else if($page=="update_category"){
