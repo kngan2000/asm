@@ -129,7 +129,7 @@ include_once("connection.php");
 				include_once("Category_Management.php");
 			}
 			elseif($page=="product_management"){
-				include_once("Product_Management.php");
+				include_once("Search_Product.php");
 			}
 			else if($page=="update_category"){
 				include_once("Update_Category.php");
