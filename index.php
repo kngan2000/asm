@@ -91,16 +91,9 @@ include_once("connection.php");
 								<li class="dropdown"><a href="#">Product<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="?page=add_product">Add Product</a></li>
-										<li><a href="?page=product_management"> Search Product/a></li>  
+										<li><a href="?page=product_management"> Search Product </a></li>  
                                     </ul>
                                 </li>
-								<li class="dropdown"><a href="#">Category<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="?page=Add_Category">Add Category</a></li>
-										<li><a href="?page=category_management">Category Management</a></li> 
-
-                                    </ul>
-                                </li> 
 								
 						</div>
 						<div class="container">
