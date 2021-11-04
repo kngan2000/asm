@@ -187,7 +187,7 @@ include_once("connection.php");
 			<div class="container">
 				<div class="row">
 					<p class="pull-left">Copyright © 2021 Cartier. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Nguyen Kieu Ngan</a></span></p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="https://www.facebook.com/profile.php?id=100025731197885">Nguyen Kieu Ngan</a></span></p>
 				</div>
 			</div>
 		</div>
