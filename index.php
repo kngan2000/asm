@@ -27,8 +27,6 @@ include_once("connection.php");
 
 <body>
 						<div class="logo">
-						<span class="Centerer"></span>
-    					<img class="Centered">
 							<a href="?page=content"><img src="image/logoatn.jpg" style="width:20%" alt=""></a>
 						</div>
 					</div>
