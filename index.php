@@ -27,7 +27,7 @@ include_once("connection.php");
 
 <body>
 						<div class="logo">
-							<a href="?page=content"><img src="image/logoatn.jpg" style="width:20%" alt=""></a>
+							<a href="?page=content"><img src="image/logoatn.jpg" style="position:absolute; width:100%; height:100%>" alt=""></a>
 						</div>
 					</div>
 					<div class="col-sm-8 pull-right">
