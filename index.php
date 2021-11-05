@@ -26,6 +26,11 @@ include_once("connection.php");
 ?>
 
 <body>
+		</div><!--/header_top-->		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="">
 						<div class="logo">
 							<a href="?page=content"><img src="image/logoatn.jpg" style="width:20%" alt=""></a>
 						</div>
