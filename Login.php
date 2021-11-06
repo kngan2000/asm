@@ -1,6 +1,4 @@
 <?php
-    /*if(isset($_SESSION['admin']) && $_SESSION['admin']==1)
-    {*/
 ?> 
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <link rel="stylesheet" href="css/bootstrap.min.css">
