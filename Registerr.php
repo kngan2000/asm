@@ -58,6 +58,9 @@
                 </tr>
                 
             </table>
+            <?php 
+            include_once("connection.php");
+            ?>
             <input type="submit" value="Đăng ký" />
             <input type="reset" value="Nhập lại" />
         </form>
