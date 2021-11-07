@@ -1,7 +1,7 @@
 <?php
 
 // Nếu là sự kiện đăng ký thì xử lý
-if (isset($_POST['dangky'])) {
+if (isset($_POST['submit'])) {
 
     //Nhúng file kết nối với database
     include_once('connection.php');
@@ -18,7 +18,7 @@ if (isset($_POST['dangky'])) {
 
     if ($result) {
         echo "Quá trình đăng ký thành công.";
-        echo '<meta http-equiv="refresh" content="0;URL=?page=login"/>';
+
     } else
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
 }
