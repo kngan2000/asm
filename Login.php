@@ -1,7 +1,6 @@
-    
-<?php
 
-//Xử lý đăng nhập
+<?php
+    //Xử lý đăng nhập
 if (isset($_POST['submit'])) {
     //Kết nối tới database
     include_once('connect.php');
@@ -37,28 +36,34 @@ if (isset($_POST['submit'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Login</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Log in</title>
 </head>
 
 <body>
-    <div class="container">
-        <form action="" method="POST">
-            <div class="form-group">
-                <label for="exampleInput">User name</label>
-                <input type="text" name="username" class="form-control" id="exampleInput" aria-describedby="" placeholder="User Name">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary" name="submit" value="Submit">Submit</button>
+    <h3>Log in</h3>
+    <table>
+        <tr>
+            <td>Username: </td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td>Password: </td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" name="submit">Login</button>
+                <button type="reset">Reset</button>
+            </td>
+        </tr>
+    </table>
+</form>
 
-        </form>
-    </div>
 </body>
 
 </html>
+
