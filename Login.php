@@ -44,7 +44,9 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+   
     <h3>Log in</h3>
+    <form action="" method="POST">
     <table>
         <tr>
             <td>Username: </td>
