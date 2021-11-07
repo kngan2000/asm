@@ -1,5 +1,27 @@
 <?php
-include_once("connect.php");
+
+// Nếu là sự kiện đăng ký thì xử lý
+if (isset($_POST['dangky'])) {
+
+    //Nhúng file kết nối với database
+    include_once('connection.php');
+
+
+    //Lấy dữ liệu từ file dangky.php
+    $username   = addslashes($_POST['txtusername']);
+    $password   = addslashes($_POST['txtpassword']);
+    $fullname   = addslashes($_POST['txtfullname']);
+    $email      = addslashes($_POST['txtemail']);
+    $address    = addslashes($_POST['txtaddress']);
+    $telephone  = addslashes($_POST['txttelephone']);
+    $result = pg_query($conn, "INSERT INTO public.user(username,password,fullname,email,address,telephone) VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$address}','{$telephone}')");
+
+    if ($result) {
+        echo "Quá trình đăng ký thành công.";
+        echo '<meta http-equiv="refresh" content="0;URL=?page=login"/>';
+    } else
+        echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +34,7 @@ include_once("connect.php");
 </head>
 <body>
     <h3>Member Registation</h3>
-    <form action="register_submit.php" method="POST">
+    <form action="" method="POST">
         <table>
             <tr>
                 <td>Username: </td>
@@ -23,12 +45,8 @@ include_once("connect.php");
                 <td><input type="password" name="password"></tr>
             </tr>
             <tr>
-                <td>Confirm Password: </td>
-                <td><input type="password" name="repassword"></tr>
-            </tr>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username"></tr>
+                <td>Full Name: </td>
+                <td><input type="text" name="fullname"></tr>
             </tr>
             <tr>
                 <td>Email: </td>
