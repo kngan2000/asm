@@ -8,12 +8,12 @@ if (isset($_POST['dangky'])) {
 
 
     //Lấy dữ liệu từ file dangky.php
-    $username   = addslashes($_POST['txtusername']);
-    $password   = addslashes($_POST['txtpassword']);
-    $fullname   = addslashes($_POST['txtfullname']);
-    $email      = addslashes($_POST['txtemail']);
-    $address    = addslashes($_POST['txtaddress']);
-    $telephone  = addslashes($_POST['txttelephone']);
+    $username   = addslashes($_POST['username']);
+    $password   = addslashes($_POST['password']);
+    $fullname   = addslashes($_POST['fullname']);
+    $email      = addslashes($_POST['email']);
+    $address    = addslashes($_POST['address']);
+    $telephone  = addslashes($_POST['telephone']);
     $result = pg_query($conn, "INSERT INTO public.user(username,password,fullname,email,address,telephone) VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$address}','{$telephone}')");
 
     if ($result) {
