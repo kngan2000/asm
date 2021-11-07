@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <h3>Member Registation</h3>
-    <form action="" method="POST">
+    
         <table>
             <tr>
                 <td>Username: </td>
