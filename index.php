@@ -64,9 +64,9 @@ include_once("connection.php");
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<?php
-                              	if(isset($_SESSION['us']) && $_SESSION['us'] != "") {
+                              	if(isset($_SESSION['username']) && $_SESSION['username'] != "") {
                             	?>
-                                 <li><a class="tm-nav-link" href="?page=update_customer"><i class="fa fa-user"></i>Hi,&nbsp;<?php echo $_SESSION['us'];?> </a> 
+                                 <li><a class="tm-nav-link" href="?page=update_customer"><i class="fa fa-user"></i>Hi,&nbsp;<?php echo $_SESSION['username'];?> </a> 
                                 </li>
                               </li>
                                  <li><a class="tm-nav-link"  href="?page=logout" >
