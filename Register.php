@@ -1,12 +1,7 @@
 <?php
 include_once("connect.php");
 ?>
-<?php
-    if (isset($_GET['page'])) {
-        $page = $_GET['page'];
-        if ($page == "Login") {
-            include_once("Login.php");
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
