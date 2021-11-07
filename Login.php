@@ -2,14 +2,14 @@
     session_start();
     include('connection.php');
     if(isset($_POST['submit'])){
-        $taikhoan = $_POST['username'];
-        $matkhau = md5($_POST['password']);
-        $sql = "SELECT * FROM user WHERE username='".$taikhoan."' AND 
-        password='".$matkhau."' LIMIT 1";
+        $username = $_POST['username'];
+        $password = md5($_POST['password']);
+        $sql = "SELECT * FROM user WHERE username='".$username."' AND 
+        password='".$password."' LIMIT 1";
         $row = pg_fetch_array($res, NULL, PGSQL_ASSOC);
         $count = pg_num_rows($row);
         if($count >0){
-            $_SESSION['submit'] = $taikhoan;
+            $_SESSION['submit'] = $username;
             header("Location:index.php");
         }else{
             echo '<script>alert("Incorrect account or password, please re-enter!")</script>';
