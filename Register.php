@@ -18,6 +18,7 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
         echo "Quá trình đăng ký thành công.";
+        echo '<meta http-equiv="refresh" content="0;URL=?page=login"/>';
     } else
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
 }
