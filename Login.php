@@ -4,7 +4,7 @@
     if(isset($_POST['submit'])){
         $taikhoan = $_POST['username'];
         $matkhau = md5($_POST['password']);
-        $sql = "SELECT * FROM useraccount WHERE username='".$taikhoan."' AND 
+        $sql = "SELECT * FROM user WHERE username='".$taikhoan."' AND 
         password='".$matkhau."' LIMIT 1";
         $row = pg_fetch_array($res, NULL, PGSQL_ASSOC);
         $count = pg_num_rows($row);
