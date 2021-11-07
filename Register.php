@@ -1,26 +1,38 @@
 <?php
 
-// Nếu là sự kiện đăng ký thì xử lý
-if (isset($_POST['submit'])) {
+//Xử lý đăng nhập
+if (isset($_POST['login'])) {
+    //Kết nối tới database
+    include_once('connect.php');
 
-    //Nhúng file kết nối với database
-    include_once('connection.php');
+    //Lấy dữ liệu nhập vào
+    $username = addslashes($_POST['username']);
+    $password = addslashes($_POST['password']);
 
+    //Kiểm tra tên đăng nhập có tồn tại không
+    $result = pg_query($conn, "SELECT username, password,state FROM public.user WHERE username='{$username}'");
+    if (pg_num_rows($result) == 0) {
+        echo "Tên đăng nhập này không tồn tại. Vui lòng kiểm tra lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
 
-    //Lấy dữ liệu từ file dangky.php
-    $username   = addslashes($_POST['username']);
-    $password   = addslashes($_POST['password']);
-    $fullname   = addslashes($_POST['fullname']);
-    $email      = addslashes($_POST['email']);
-    $address    = addslashes($_POST['address']);
-    $telephone  = addslashes($_POST['telephone']);
-    $result = pg_query($conn, "INSERT INTO public.user(username,password,fullname,email,address,telephone) VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$address}','{$telephone}')");
+    //Lấy mật khẩu trong database ra
+    $row = pg_fetch_array($result);
 
-    if ($result) {
-        echo "Quá trình đăng ký thành công.";
+    //So sánh 2 mật khẩu có trùng khớp hay không
+    if ($password != $row['password']) {
+        echo "Mật khẩu không đúng. Vui lòng nhập lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
 
-    } else
-        echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
+    if (pg_num_rows($result) == 1) {
+        $_SESSION["username"] = $username;
+        $_SESSION["admin"] = $row['state'];
+        echo"thanh cong";
+        echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+    } else {
+        echo "You loged in fail!";
+    }
 }
 ?>
 
