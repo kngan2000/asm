@@ -3,7 +3,7 @@
     //Xử lý đăng nhập
 if (isset($_POST['submit'])) {
     //Kết nối tới database
-    include_once('connect.php');
+    include_once('connection.php');
 
     //Lấy dữ liệu nhập vào
     $username = addslashes($_POST['username']);
