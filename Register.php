@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 
     if ($result) {
         echo "Quá trình đăng ký thành công.";
-        //echo '<meta http-equiv="refresh" content="0;URL=?page=login"/>';
+
     } else
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
 }
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <h3>Member Registation</h3>
-
+    <form action="" method="POST">
         <table>
             <tr>
                 <td>Username: </td>
