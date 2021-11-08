@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $cateid   = addslashes($_POST['txtcateid']);
     $proname  = addslashes($_POST['txtproname']);
     $price    = addslashes($_POST['txtprice']);
-    $result = pg_query($conn, "INSERT INTO public.category(productid,categoryid, productname, price) VALUES ({$proid}, {$cateid}, '{$proname}','{$price}')");
+    $result = pg_query($conn, "INSERT INTO public.product(productid,categoryid, productname, price) VALUES ({$proid}, {$cateid}, '{$proname}','{$price}')");
 
     if ($result) {
         echo "Quá trình đăng ký thành công.";
