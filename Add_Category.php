@@ -8,13 +8,13 @@ if (isset($_POST['submit'])) {
 
 
     //Lấy dữ liệu từ file dangky.php
-    $cateid     = addslashes($_POST['txtcategoryid']);
+    $cateid   = addslashes($_POST['txtcategoryid']);
     $catename   = addslashes($_POST['txtcategoryname']);
-    $descrip    = addslashes($_POST['txtdescription']);
-    $result     = pg_query($conn, "INSERT INTO public.category (categoryid,categoryname,description) VALUES ('{$cateid}','{$catename}','{$descrip}')");
+    $des   = addslashes($_POST['txtdescription']);
+    $result = pg_query($conn, "INSERT INTO public.category(categoryid,categoryname,description) VALUES ('{$cateid}','{$catename}','{$des}')");
 
     if ($result) {
-        echo "Quá trình thêm sản phẩm thành công.";
+        echo "Quá trình đăng ký thành công.";
 
     } else
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
