@@ -6,7 +6,7 @@
         <tr>
                 <th><strong>Category ID</strong></th>
                 <th><strong>Category Name</strong></th>
-                <th><strong>Price</strong></th>
+                <th><strong>Description</strong></th>
         </tr>
         <tbody>
         <?php
@@ -18,7 +18,7 @@
 			<tr>
               <td><?php echo $row["categoryid"];?></td>
               <td><?php echo $row["categoryname"];?></td>
-              <td><?php echo $row["price"];?></td>
+              <td><?php echo $row["description"];?></td>
             </tr>
             <?php $id++;}?>
             </tbody>
