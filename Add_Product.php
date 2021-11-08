@@ -19,12 +19,12 @@ if (isset($_POST['btnAdd'])) {
 
     copy($proimage['tmp_name'], "image" . $proimage['name']);
     $filePic = $proimage['name'];
-    $result = pg_query($conn, "INSERT INTO public.product(productid,productname,price,quantity,image,shortdes,product_date)
-    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$filePic}','{$description}','" . date('Y-m-d H:i:s') . "')");
+    $result = pg_query($conn, "INSERT INTO public.product(productid,productname,price,quantity,image,shortdes)
+    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$filePic}','{$description}')");
 
     if ($result) {
         echo "Quá trình thêm mới thành công.";
-        echo '<meta http-equiv="refresh" content="0;URL=?page=product"/>';
+
     } else
         echo "Có lỗi xảy ra trong quá trình thêm mới. <a href='?page=add_product'>Again</a>";
 }
@@ -81,7 +81,7 @@ if (isset($_POST['btnAdd'])) {
         </div>
 
         <div class="form-group">
-            <label for="lblShort" class="col-sm-2 control-label">Short description(*): </label>
+            <label for="lblShort" class="col-sm-2 control-label">Short Description(*): </label>
             <div class="col-sm-10">
                 <input type="text" name="txtShort" id="txtShort" class="form-control" placeholder="Short description" value='' />
             </div>
