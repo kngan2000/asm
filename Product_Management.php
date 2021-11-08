@@ -5,9 +5,13 @@
     <table width="500" border="1" >
         <tr>
                 <th><strong>Product ID</strong></th>
-                <th><strong>Category ID</strong></th>
                 <th><strong>Product Name</strong></th>
                 <th><strong>Price</strong></th>
+                <th><strong>Quantity</strong></th>
+                <th><strong>Category ID</strong></th>
+                <th><strong>Image</strong></th>
+                <th><strong>Description</strong></th>
+
         </tr>
         <tbody>
         <?php
@@ -18,9 +22,12 @@
             ?>
 			<tr>
               <td><?php echo $row["productid"];?></td>
-              <td><?php echo $row["categoryid"];?></td>
               <td><?php echo $row["productname"];?></td>
               <td><?php echo $row["price"];?></td>
+              <td><?php echo $row["quantity"];?></td>
+              <td><?php echo $row["categoryid"];?></td>
+              <td><?php echo $row["image"];?></td>
+              <td><?php echo $row["shortdes"];?></td>
             </tr>
             <?php $id++;}?>
             </tbody>
