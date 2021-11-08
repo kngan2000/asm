@@ -8,11 +8,11 @@ if (isset($_POST['submit'])) {
 
 
     //Lấy dữ liệu từ file dangky.php
-    $proid   = addslashes($_POST['txtproid']);
-    $cateid   = addslashes($_POST['txtcateid']);
-    $proname  = addslashes($_POST['txtproname']);
-    $price    = addslashes($_POST['txtprice']);
-    $result = pg_query($conn, "INSERT INTO public.product(productid,categoryid, productname, price) VALUES ({$proid}, {$cateid}, '{$proname}','{$price}')");
+    $proid   = addslashes($_POST['txtproductid']);
+    $cateid   = addslashes($_POST['categoryid']);
+    $proname   = addslashes($_POST['productname']);
+    $price      = addslashes($_POST['price']);
+    $result = pg_query($conn, "INSERT INTO public.product(productid,categoryid,productname,price) VALUES ({$proid},{$cateid},'{$proname}','{$price}')");
 
     if ($result) {
         echo "Quá trình đăng ký thành công.";
@@ -21,28 +21,30 @@ if (isset($_POST['submit'])) {
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
 }
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
 </head>
 <body>
-<h3>Add Product</h3>
+    <h3>Add Product</h3>
     <form action="" method="POST">
         <table>
             <tr>
-                <td> Product ID: </td>
-                <td><input type="text" name="txtproid"></tr>
+                <td>Product ID: </td>
+                <td><input type="text" name="txtproductid"></tr>
             </tr>
             <tr>
                 <td>Category ID: </td>
-                <td><input type="text" name="txtcateid"></tr>
+                <td><input type="text" name="categoryid"></tr>
             </tr>
             <tr>
                 <td>Product Name: </td>
-                <td><input type="text" name="txtproname"></tr>
+                <td><input type="text" name="productname"></tr>
             </tr>
             <tr>
                 <td>Price: </td>
