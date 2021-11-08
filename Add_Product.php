@@ -17,7 +17,7 @@ if (isset($_POST['btnAdd'])) {
     $proimage      = $_FILES['Image'];
     $description      = $_POST['txtShort'];
 
-    copy($proimage['tmp_name'], "image" . $proimage['name']);
+    copy($proimage['tmp_name'], "asm/image/" . $proimage['name']);
     $filePic = $proimage['name'];
     $result = pg_query($conn, "INSERT INTO public.product(productid,productname,price,quantity,image,shortdes)
     VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$proimage}','{$description}')");
