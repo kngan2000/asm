@@ -1,27 +1,3 @@
-<?php
-
-// Nếu là sự kiện đăng ký thì xử lý
-if (isset($_POST['submit'])) {
-
-    //Nhúng file kết nối với database
-    include_once('connection.php');
-
-
-    //Lấy dữ liệu từ file dangky.php
-    $proid   = addslashes($_POST['txtproductid']);
-    $cateid   = addslashes($_POST['categoryid']);
-    $proname   = addslashes($_POST['productname']);
-    $price      = addslashes($_POST['price']);
-    $result = pg_query($conn, "INSERT INTO public.product(productid,categoryid,productname,price) VALUES ({$proid},{$cateid},'{$proname}','{$price}')");
-
-    if ($result) {
-        echo "Quá trình đăng ký thành công.";
-
-    } else
-        echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
