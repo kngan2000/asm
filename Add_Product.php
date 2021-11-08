@@ -17,10 +17,10 @@ if (isset($_POST['btnAdd'])) {
     $proimage      = $_FILES['Image'];
     $description      = $_POST['txtShort'];
 
-    copy($proimage['tmp_name'], "public/image/" . $proimage['name']);
+    copy($proimage['tmp_name'], "image" . $proimage['name']);
     $filePic = $proimage['name'];
     $result = pg_query($conn, "INSERT INTO public.product(productid,productname,price,quantity,image,shortdes,product_date)
-    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$proimage}','{$description}','" . date('Y-m-d H:i:s') . "')");
+    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$filePic}','{$description}','" . date('Y-m-d H:i:s') . "')");
 
     if ($result) {
         echo "Quá trình thêm mới thành công.";
