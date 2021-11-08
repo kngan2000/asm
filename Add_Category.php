@@ -1,36 +1,25 @@
 <?php
-        include_once("connection.php");
-		if(isset($_POST["submit"]))
-		{
-			$id = $_POST["categoryid"];
-			$name = $_POST["categoryname"];
-			$des = $_POST["description"];
-			$err="";
-			if($id==""){
-				$err .="<li>Enter Category ID, please!</li>";
-			}
-			if($name==""){
-				$err .="<li>Enter Category Name, please!</li>";
-			}
-			if($err!="")
-			{
-				echo "<ul>$err</ul>";
-			}
-			else{
-				$sq = "SELECT * from public.category where catogoryid='$id' or categoryname='$name'";
-				$row = pg_fetch_array($res, NULL, PGSQL_ASSOC);
-				if(pg_num_rows($result)==0)
-				{
-					pg_query($conn, "INSERT INTO public.category (categoryid, categoryname, description) VALUES ('$id','$name','$des')");
-					echo '<meta http-equiv="refresh" content="0;URL=?page=category_management" />';
-				}
-				else
-				{
-					echo "<li>Duplicate category ID or Name</li>";
-				}
-			}
-		}
-	?>
+
+// Nếu là sự kiện đăng ký thì xử lý
+if (isset($_POST['submit'])) {
+
+    //Nhúng file kết nối với database
+    include_once('connection.php');
+
+
+    //Lấy dữ liệu từ file dangky.php
+    $cateid     = addslashes($_POST['categoryid']);
+    $catename   = addslashes($_POST['categoryname']);
+    $descrip    = addslashes($_POST['description']);
+    $result     = pg_query($conn, "INSERT INTO public.category (categoryid,categoryname,description) VALUES ('{$cateid}','{$catename}','{$descrip}')");
+
+    if ($result) {
+        echo "Quá trình thêm sản phẩm thành công.";
+
+    } else
+        echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
