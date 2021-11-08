@@ -17,11 +17,11 @@
 				echo "<ul>$err</ul>";
 			}
 			else{
-				$sq = "SELECT * from category where catogoryid='$id' or categoryname='$name'";
+				$sq = "SELECT * from public.category where catogoryid='$id' or categoryname='$name'";
 				$row = pg_fetch_array($res, NULL, PGSQL_ASSOC);
 				if(pg_num_rows($result)==0)
 				{
-					pg_query($conn, "INSERT INTO category (categoryd, categoryname, description) VALUES ('$id','$name','$des')");
+					pg_query($conn, "INSERT INTO public.category (categoryid, categoryname, description) VALUES ('$id','$name','$des')");
 					echo '<meta http-equiv="refresh" content="0;URL=?page=category_management" />';
 				}
 				else
