@@ -8,9 +8,9 @@ if (isset($_POST['submit'])) {
 
 
     //Lấy dữ liệu từ file dangky.php
-    $cateid     = addslashes($_POST['categoryid']);
-    $catename   = addslashes($_POST['categoryname']);
-    $descrip    = addslashes($_POST['description']);
+    $cateid     = addslashes($_POST['txtcategoryid']);
+    $catename   = addslashes($_POST['txtcategoryname']);
+    $descrip    = addslashes($_POST['txtdescription']);
     $result     = pg_query($conn, "INSERT INTO public.category (categoryid,categoryname,description) VALUES ('{$cateid}','{$catename}','{$descrip}')");
 
     if ($result) {
@@ -33,15 +33,15 @@ if (isset($_POST['submit'])) {
         <table>
             <tr>
                 <td>Category ID: </td>
-                <td><input type="text" name="categoryid"></tr>
+                <td><input type="text" name="txtcategoryid"></tr>
             </tr>
             <tr>
                 <td>Category Name: </td>
-                <td><input type="text" name="categoryname"></tr>
+                <td><input type="text" name="txtcategoryname"></tr>
             </tr>
             <tr>
                 <td>Description: </td>
-                <td><input type="text" name="description"></tr>
+                <td><input type="text" name="txtdescription"></tr>
             </tr>
             <tr>
                 <td colspan="2">
