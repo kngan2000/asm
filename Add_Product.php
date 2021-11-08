@@ -20,7 +20,7 @@ if (isset($_POST['btnAdd'])) {
     copy($proimage['tmp_name'], "image" . $proimage['name']);
     $filePic = $proimage['name'];
     $result = pg_query($conn, "INSERT INTO public.product(productid,productname,price,quantity,image,shortdes)
-    VALUES({$proid},'{$proname}','{$price}','{$quantity}','{$procate}','{$proimage}','{$description}')");
+    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$proimage}','{$description}')");
 
     if ($result) {
         echo "Quá trình thêm mới thành công.";
@@ -91,7 +91,6 @@ if (isset($_POST['btnAdd'])) {
             <div class="col-sm-offset-2 col-sm-10">
                 <input type="submit" class="btn btn-primary" name="btnAdd" id="btnAdd" value="Add new" />
                 <input type="button" class="btn btn-primary" name="btnIgnore" id="btnIgnore" value="Ignore" onclick="window.location='product.php'" />
-
             </div>
         </div>
     </form>
