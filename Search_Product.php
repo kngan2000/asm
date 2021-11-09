@@ -31,12 +31,14 @@ if (isset($_POST['search'])) {
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th scope="col">Product ID</th>
+                    <th scope="col">No.</th>
                     <th scope="col">Product Name</th>
-                    <th scope="col">Price/th>
+                    <th scope="col">Product Price</th>
+                    <th scope="col">Quantity</th>
                     <th scope="col">Category ID</th>
                     <th scope="col">Image</th>
                     <th scope="col">Description</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -51,9 +53,12 @@ if (isset($_POST['search'])) {
                         <td><?php echo $row["quantity"]; ?></td>
                         <td><?php echo $row["categoryid"]; ?></td>
                         <td>
-                            <img src="public/image/<?php echo $row["image"]; ?>" style="height: 100px; width: 100px;">
+                            <img src="image/<?php echo $row["image"]; ?>" style="height: 100px; width: 100px;">
                         </td>
                         <td><?php echo $row["description"]; ?></td>
+                        <td>
+                            <button><a href="">Buy Now</a></button>
+                        </td>
                     </tr>
                 <?php $id++;
                 } ?>
