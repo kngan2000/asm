@@ -1,12 +1,12 @@
 <?php
-//link  category
+//liên kết bảng category
 $sql_category = "SELECT * FROM public.category";
 $query_category = pg_query($conn, $sql_category);
 
 // lấy dữ liệu
 if (isset($_POST['btnAdd'])) {
 
-    //Nhúng file kết nối với database
+    //Nhúng file kết nối với database 
     include_once('connection.php');
 
     $proid   = $_POST['txtID'];
@@ -17,10 +17,10 @@ if (isset($_POST['btnAdd'])) {
     $proimage      = $_FILES['Image'];
     $description      = $_POST['txtShort'];
 
-    copy($proimage['tmp_name'], "asm/image/" . $proimage['name']);
+    copy($proimage['tmp_name'], "product/image/" . $proimage['name']);
     $filePic = $proimage['name'];
     $result = pg_query($conn, "INSERT INTO public.product(productid,productname,price,quantity,image,shortdes)
-    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$proimage}','{$description}')");
+    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$proimage}','{$description}')"); //truy vấn csdl
 
     if ($result) {
         echo "Quá trình thêm mới thành công.";
@@ -30,7 +30,7 @@ if (isset($_POST['btnAdd'])) {
 }
 ?>
 
-<div class="container">
+<div class="container"> 
     <h2>Adding new Product</h2>
 
     <form id="frmProduct" name="frmProduct" method="POST" enctype="multipart/form-data" action="" class="form-horizontal" role="form">
@@ -81,7 +81,7 @@ if (isset($_POST['btnAdd'])) {
         </div>
 
         <div class="form-group">
-            <label for="lblShort" class="col-sm-2 control-label">Short Description(*): </label>
+            <label for="lblShort" class="col-sm-2 control-label">Description(*): </label>
             <div class="col-sm-10">
                 <input type="text" name="txtShort" id="txtShort" class="form-control" placeholder="Short description" value='' />
             </div>
