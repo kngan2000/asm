@@ -19,6 +19,15 @@
 Session_Start();
 include_once("connection.php");
 ?>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span> 
+<span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<body>
 <div class="slideshow-container">
 
 <!-- Full-width images with number and caption text -->
@@ -46,14 +55,6 @@ include_once("connection.php");
 </div>
 <br>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span> 
-<span class="dot" onclick="currentSlide(2)"></span> 
-<span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<body>
 	
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
