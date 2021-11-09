@@ -1,3 +1,21 @@
+<?php
+if (isset($_POST['search'])) {
+
+    //Nhúng file kết nối với database
+    include_once('connection.php');
+
+    //Lấy dữ liệu từ file 
+    $search   = $_POST['txtSearch'];
+
+    $result = pg_query($conn, "SELECT productname,price,quantity,categoryid,image,description FROM public.product WHERE productname LIKE '%{$search}%'");
+
+    if ($result) {
+        echo "Search with keyword: $search";
+        //echo '<meta http-equiv="refresh" content="0;URL=?page=category"/>';
+    } else
+        echo "Có lỗi xảy ra trong quá trình tìm kiếm. <a href='?page=add_category'>Again</a>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
