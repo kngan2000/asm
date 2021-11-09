@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>ATN COMPANY</title>
+    <title>CARTIER</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/price-range.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
-	<link href="css/banner.css" rel="stylesheet">
-	     
+	<link href="css/responsive.css" rel="stylesheet">
+	
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favico.icon">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <?php
 Session_Start();
 include_once("connection.php");
 ?>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span> 
-<span class="dot" onclick="currentSlide(2)"></span> 
-<span class="dot" onclick="currentSlide(3)"></span> 
-</div>
 
 <body>
 	<header id="header"><!--header-->
@@ -50,32 +52,6 @@ include_once("connection.php");
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
-						<div class="slideshow-container">
-
-<!-- Full-width images with number and caption text -->
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="image1.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="image2.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="image3.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<!-- Next and previous buttons -->
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
 					</div>
 				</div>
 			</div>
@@ -85,16 +61,16 @@ include_once("connection.php");
 				<div class="row">
 					<div class="">
 						<div class="logo">
-							<a href="?page=content"><img src="image/logoatn.jpg" style="width:20%" alt=""></a>
+							<a href="?page=content"><img src="image/ct.jpg" style="width:24%" alt=""></a>
 						</div>
 					</div>
 					<div class="col-sm-8 pull-right">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<?php
-                              	if(isset($_SESSION['username']) && $_SESSION['username'] != "") {
+                              	if(isset($_SESSION['us']) && $_SESSION['us'] != "") {
                             	?>
-                                 <li><a class="tm-nav-link" href="?page=update_customer"><i class="fa fa-user"></i>Hi,&nbsp;<?php echo $_SESSION['username'];?> </a> 
+                                 <li><a class="tm-nav-link" href="?page=update_customer"><i class="fa fa-user"></i>Hi,&nbsp;<?php echo $_SESSION['us'];?> </a> 
                                 </li>
                               </li>
                                  <li><a class="tm-nav-link"  href="?page=logout" >
@@ -132,6 +108,10 @@ include_once("connection.php");
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.php">Home</a></li> 
 								<li class="dropdown"><a href="?page=men_fashion">Shop<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="?page=men_fashion">Men's Fashion</a></li>
+										<li><a href="?page=women_fashion">Women's Fashion</a></li>  
+                                    </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Product<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
@@ -150,7 +130,7 @@ include_once("connection.php");
 						</div>
 						<div class="container">
 		
-						<div class="col-sm-3  pull-right">
+					<div class="col-sm-3  pull-right">
 						<div class="search_box pull-right">
 							<input type="text" placeholder="Search"/>
 						</div>
@@ -169,9 +149,6 @@ include_once("connection.php");
 			}
 			elseif($page=="login"){
 				include_once("Login.php");
-			}
-			elseif($page=="search"){
-				include_once("Search_Product.php");
 			}
 			elseif($page=="category_management"){
 				include_once("Category_Management.php");
@@ -194,18 +171,160 @@ include_once("connection.php");
 			else if($page=="Add_Category") {
 				include_once("Add_Category.php");
 			}
-			
+			else if($page=="update_customer") {
+				include_once("Update_customer.php");
+			}
+			else if($page=="men_fashion") {
+				include_once("Men_fashion.php");
+			}
+			else if($page=="women_fashion") {
+				include_once("Women_Fashion.php");
+			}
 
 		}
 		else{
 			include_once("content.php");
 		}
 		?>
+	<footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>CARTIER</span></h2>
+							<p></p>
+						</div>
+					</div>
+					<div class="col-sm-7">
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="image/b1.jpg" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Circle of Hands</p>
+								<h2>24 DEC 2014</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe2.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Circle of Hands</p>
+								<h2>24 DEC 2014</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe3.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Circle of Hands</p>
+								<h2>24 DEC 2014</h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe4.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Circle of Hands</p>
+								<h2>24 DEC 2014</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="address">
+							<img src="images/home/map.png" alt="" />
+							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Service</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Online Help</a></li>
+								<li><a href="#">Contact Us</a></li>
+								<li><a href="#">Order Status</a></li>
+								<li><a href="#">Change Location</a></li>
+								<li><a href="#">FAQ’s</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Policies</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Terms of Use</a></li>
+								<li><a href="#">Privecy Policy</a></li>
+								<li><a href="#">Refund Policy</a></li>
+								<li><a href="#">Billing System</a></li>
+								<li><a href="#">Ticket System</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>About Shopper</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Company Information</a></li>
+								<li><a href="#">Careers</a></li>
+								<li><a href="#">Store Location</a></li>
+								<li><a href="#">Affillate Program</a></li>
+								<li><a href="#">Copyright</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>About Cartier</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
 		
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2021 ATN COMPANY. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2021 Cartier. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Nguyen Kieu Ngan</a></span></p>
 				</div>
 			</div>
 		</div>
