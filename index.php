@@ -120,12 +120,12 @@ include_once("connection.php");
                                 </li> 
 								
 						</div>
-						<div class="container">
+						<!--<div class="container">
 		
-					<div class="col-sm-3  pull-right">
+						<div class="col-sm-3  pull-right">
 						<div class="search_box pull-right">
 							<input type="text" placeholder="Search"/>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>
@@ -166,15 +166,7 @@ include_once("connection.php");
 			else if($page=="Add_Category") {
 				include_once("Add_Category.php");
 			}
-			else if($page=="update_customer") {
-				include_once("Update_customer.php");
-			}
-			else if($page=="men_fashion") {
-				include_once("Men_fashion.php");
-			}
-			else if($page=="women_fashion") {
-				include_once("Women_Fashion.php");
-			}
+			
 
 		}
 		else{
@@ -184,11 +176,11 @@ include_once("connection.php");
 		
 		<div class="footer-bottom">
 			<div class="container">
-				<!--<div class="row">
+				<div class="row">
 					<p class="pull-left">Copyright © 2021 ATN COMPANY. All rights reserved.</p>
 				</div>
 			</div>
-		</div>-->
+		</div>
 		
 	</footer><!--/Footer-->  
     <script src="js/jquery.js"></script>
