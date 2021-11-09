@@ -108,6 +108,7 @@ include_once("connection.php");
 								<li class="dropdown"><a href="#">Product<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="?page=add_product">Add Product</a></li>
+										<li><a href="?page=search_product">Search Product</a></li>
 										<li><a href="?page=product_management"> Product management</a></li>  
                                     </ul>
                                 </li>
@@ -141,6 +142,9 @@ include_once("connection.php");
 			}
 			elseif($page=="login"){
 				include_once("Login.php");
+			}
+			elseif($page=="search"){
+				include_once("Search_Product.php");
 			}
 			elseif($page=="category_management"){
 				include_once("Category_Management.php");
@@ -182,7 +186,7 @@ include_once("connection.php");
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2021 Cartier. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2021 ATN COMPANY. All rights reserved.</p>
 				</div>
 			</div>
 		</div>
