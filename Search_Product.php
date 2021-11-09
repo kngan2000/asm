@@ -11,7 +11,7 @@ if (isset($_POST['search'])) {
 
     if ($result) {
         echo "Search with keyword: $search";
-        //echo '<meta http-equiv="refresh" content="0;URL=?page=category"/>';
+        echo '<meta http-equiv="refresh" content="0;URL=?page=category"/>';
     } else
         echo "Có lỗi xảy ra trong quá trình tìm kiếm. <a href='?page=add_category'>Again</a>";
 }
@@ -31,14 +31,14 @@ if (isset($_POST['search'])) {
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th scope="col">No.</th>
+
                     <th scope="col">Product Name</th>
                     <th scope="col">Product Price</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Category ID</th>
                     <th scope="col">Image</th>
                     <th scope="col">Description</th>
-                    <th scope="col"></th>
+
                 </tr>
             </thead>
             <tbody>
