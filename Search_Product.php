@@ -19,7 +19,6 @@
                     <th scope="col">Category ID</th>
                     <th scope="col">Image</th>
                     <th scope="col">Description</th>
-                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
