@@ -111,7 +111,7 @@ include_once("connection.php");
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.php">Home</a></li>
-								<li class="dropdown"><a href="?page=men_fashion">Shop<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="?page=men_fashion">Shop</a>
 								</li>
 								<?php
 								if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) {
