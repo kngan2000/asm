@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $password = addslashes($_POST['password']);
 
     //Kiểm tra tên đăng nhập có tồn tại không
-    $result = pg_query($conn, "SELECT username, password FROM public.user WHERE username='{$username}'");
+    $result = pg_query($conn, "SELECT username, password, state FROM public.user WHERE username='{$username}'");
     if (pg_num_rows($result) == 0) {
         echo "Tên đăng nhập này không tồn tại. Vui lòng kiểm tra lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
@@ -27,8 +27,8 @@ if (isset($_POST['submit'])) {
 
     if (pg_num_rows($result) == 1) {
         $_SESSION["username"] = $username;
-        //$_SESSION["admin"] = $row['state'];
-        echo"thanh cong";
+        $_SESSION["admin"] = $row['state'];
+        echo"Successfully!";
         echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
     } else {
         echo "You loged in fail!";
