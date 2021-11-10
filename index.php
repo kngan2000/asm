@@ -20,13 +20,6 @@ Session_Start();
 include_once("connection.php");
 ?>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span> 
-<span class="dot" onclick="currentSlide(2)"></span> 
-<span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
 <body>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
@@ -127,7 +120,6 @@ include_once("connection.php");
 						<div class="col-sm-3  pull-right">
 						<div class="search_box pull-right">
 							<input type="text" name="txtSearch" placeholder="Search"/>
-							
 						</div>
 						</div>
 												</div>
