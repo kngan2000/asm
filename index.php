@@ -129,68 +129,79 @@ include_once("connection.php");
 							<input type="text" name="txtSearch" placeholder="Search"/>
 							
 						</div>
+						<div> 
+						<h3>HOT</h3>
+							<div id="slideshow">
+  							<div class="slide-wrapper">
+    						<div class="slide"><img src="image/image1.jpg"></div>
+       						<div class="slide"><img src="image/image2.jpg"></div>
+							   <div class="slide"><img src="image/image3.jpg"></div>
+  						</div>
 						</div>
-						</form>
-				</div>
-			</div>
-		</div><!--/header-bottom-->
-	</header><!--/header-->	
-	<?php
-		if(isset($_GET['page']))
-		{ 
-			
-			$page=$_GET['page'];
-			if($page=="Register"){
-				include_once("Register.php");
-			}
-			elseif($page=="login"){
-				include_once("Login.php");
-			}
-			elseif($page=="search"){
-				include_once("Search_Product.php");
-			}
-			elseif($page=="category_management"){
-				include_once("Category_Management.php");
-			}
-			elseif($page=="product_management"){
-				include_once("Product_Management.php");
-			}
-			else if($page=="update_category"){
-				include_once("Update_Category.php");
-			}
-			else if($page=="add_product"){
-				include_once("Add_Product.php");
-			}
-			else if($page=="update_product"){
-				include_once("Update_Product.php");
-			}
-			else if($page=="logout") {
-				include_once("Logout.php");
-			}
-			else if($page=="Add_Category") {
-				include_once("Add_Category.php");
-			}
-			else{
-			include_once("content.php");
-			}
-		}
-			
-		?>
-		
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Copyright © 2021 ATN COMPANY. All rights reserved.</p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->  
-    <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/price-range.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
+												</div>
+												</div>
+												</form>
+										</div>
+									</div>
+								</div><!--/header-bottom-->
+							</header><!--/header-->	
+							<?php
+								if(isset($_GET['page']))
+								{ 
+									
+									$page=$_GET['page'];
+									if($page=="Register"){
+										include_once("Register.php");
+									}
+									elseif($page=="login"){
+										include_once("Login.php");
+									}
+									elseif($page=="search"){
+										include_once("Search_Product.php");
+									}
+									elseif($page=="category_management"){
+										include_once("Category_Management.php");
+									}
+									elseif($page=="product_management"){
+										include_once("Product_Management.php");
+									}
+									else if($page=="update_category"){
+										include_once("Update_Category.php");
+									}
+									else if($page=="add_product"){
+										include_once("Add_Product.php");
+									}
+									else if($page=="update_product"){
+										include_once("Update_Product.php");
+									}
+									else if($page=="logout") {
+										include_once("Logout.php");
+									}
+									else if($page=="Add_Category") {
+										include_once("Add_Category.php");
+									}
+									else{
+									include_once("content.php");
+									}
+								}
+
+									
+								?>
+								
+								<div class="footer-bottom">
+									<div class="container">
+										<div class="row">
+											<p class="pull-left">Copyright © 2021 ATN COMPANY. All rights reserved.</p>
+										</div>
+									</div>
+								</div>
+								
+							</footer><!--/Footer-->  
+							<script src="js/jquery.js"></script>
+							<script src="js/bootstrap.min.js"></script>
+							<script src="js/jquery.scrollUp.min.js"></script>
+							<script src="js/price-range.js"></script>
+							<script src="js/jquery.prettyPhoto.js"></script>
+							<script src="js/main.js"></script>
+						</body>
+						</html>
