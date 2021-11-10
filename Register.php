@@ -14,7 +14,8 @@ if (isset($_POST['submit'])) {
     $email      = addslashes($_POST['email']);
     $address    = addslashes($_POST['address']);
     $telephone  = addslashes($_POST['telephone']);
-    $result = pg_query($conn, "INSERT INTO public.user(username,password,fullname,email,address,telephone) 
+
+    $result = pg_query($conn, "INSERT INTO public.user(username,password,fullname,email,address,telephone,state) 
     VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$address}','{$telephone}',0)");
 
     if ($result) {
