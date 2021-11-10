@@ -59,7 +59,7 @@ include_once("connection.php");
 				<div class="row">
 					<div class="">
 						<div class="logo">
-							<a href="?page=content"><img src="image/logoatn.jpg" style="width:50%; display: block; margin-left: auto; margin-right: auto;" alt=""></a>
+							<a href="?page=content"><img src="image/logoatn.jpg" style="width:15%; display: block; margin-left: auto; margin-right: auto;" alt=""></a>
 						</div>
 					</div>
 					<div class="col-sm-8 pull-right">
