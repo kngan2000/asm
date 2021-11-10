@@ -6,7 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>ATN COMPANY</title>
-	     
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	<link href="css/price-range.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/banner.css" rel="stylesheet">
 </head><!--/head-->
 <?php
 Session_Start();
@@ -100,7 +106,9 @@ include_once("connection.php");
 								<li><a href="index.php">Home</a></li> 
 								<li class="dropdown"><a href="?page=men_fashion">Shop<i class="fa fa-angle-down"></i></a>
                                 </li> 
-								
+								<?php
+								if (isset($_SESSION['user_name']) && $_SESSION['admin'] == 1) {
+								?>
 								<li class="dropdown"><a href="#">Product<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="?page=add_product">Add Product</a></li>
@@ -114,7 +122,15 @@ include_once("connection.php");
 
                                     </ul>
                                 </li>
-								
+								<?php
+                    } else {
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?page=pronew">Product New</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
 
 								
 						</div>
