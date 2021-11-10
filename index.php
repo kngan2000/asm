@@ -129,14 +129,6 @@ include_once("connection.php");
 							<input type="text" name="txtSearch" placeholder="Search"/>
 							
 						</div>
-						<div> 
-						<h3>HOT</h3>
-							<div id="slideshow">
-  							<div class="slide-wrapper">
-    						<div class="slide"><img src="image/image1.jpg"></div>
-       						<div class="slide"><img src="image/image2.jpg"></div>
-							   <div class="slide"><img src="image/image3.jpg"></div>
-  						</div>
 						</div>
 												</div>
 												</div>
