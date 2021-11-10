@@ -12,7 +12,6 @@
 	<link href="css/price-range.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
-	<link href="css/banner.css" rel="stylesheet">
 </head><!--/head-->
 <?php
 Session_Start();
