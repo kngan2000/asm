@@ -115,7 +115,7 @@ include_once("connection.php");
 								<?php
 								if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) {
 								?>
-								<li class="dropdown"><a href="?page=men_fashion">Shop</a>
+								<li class="dropdown"><a href="?page=shop">Shop</a>
 								</li>
 									<li class="dropdown"><a href="#">Product<i class="fa fa-angle-down"></i></a>
 										<ul role="menu" class="sub-menu">
@@ -133,7 +133,7 @@ include_once("connection.php");
 								<?php
 								} else {
 								?>
-										<li class="nav-item"><a href="?page=men_fashion">Shop</a></li>
+										<li class="nav-item"><a href="?page=shop">Shop</a></li>
 								<?php
 								}
 								?>
