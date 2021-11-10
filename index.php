@@ -20,6 +20,13 @@ Session_Start();
 include_once("connection.php");
 ?>
 
+<!-- The dots/circles -->
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span> 
+<span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
 <body>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
@@ -52,7 +59,7 @@ include_once("connection.php");
 				<div class="row">
 					<div class="">
 						<div class="logo">
-							<a href="?page=content"><img src="image/logoatn.jpg" style="width:15%; display: block; margin-left: auto; margin-right: auto;" alt=""></a>
+							<a href="?page=content"><img src="image/logoatn.jpg" style="width:50%; display: block; margin-left: auto; margin-right: auto;" alt=""></a>
 						</div>
 					</div>
 					<div class="col-sm-8 pull-right">
@@ -120,80 +127,67 @@ include_once("connection.php");
 						<div class="col-sm-3  pull-right">
 						<div class="search_box pull-right">
 							<input type="text" name="txtSearch" placeholder="Search"/>
+							
 						</div>
-						<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Copyright © 2021 Cartier. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Nguyen Kieu Ngan</a></span></p>
+						<div> 
+							
+						</div>
+						</div>
+						</form>
 				</div>
 			</div>
-		</div>
-						</div>
-												</div>
-												</div>
-												</form>
-										</div>
-									</div>
-								</div><!--/header-bottom-->
-							</header><!--/header-->	
-							<?php
-								if(isset($_GET['page']))
-								{ 
-									
-									$page=$_GET['page'];
-									if($page=="Register"){
-										include_once("Register.php");
-									}
-									elseif($page=="login"){
-										include_once("Login.php");
-									}
-									elseif($page=="search"){
-										include_once("Search_Product.php");
-									}
-									elseif($page=="category_management"){
-										include_once("Category_Management.php");
-									}
-									elseif($page=="product_management"){
-										include_once("Product_Management.php");
-									}
-									else if($page=="update_category"){
-										include_once("Update_Category.php");
-									}
-									else if($page=="add_product"){
-										include_once("Add_Product.php");
-									}
-									else if($page=="update_product"){
-										include_once("Update_Product.php");
-									}
-									else if($page=="logout") {
-										include_once("Logout.php");
-									}
-									else if($page=="Add_Category") {
-										include_once("Add_Category.php");
-									}
-									else{
-									include_once("content.php");
-									}
-								}
+		</div><!--/header-bottom-->
+	</header><!--/header-->	
+	<?php
+		if(isset($_GET['page']))
+		{ 
+			
+			$page=$_GET['page'];
+			if($page=="Register"){
+				include_once("Register.php");
+			}
+			elseif($page=="login"){
+				include_once("Login.php");
+			}
+			elseif($page=="search"){
+				include_once("Search_Product.php");
+			}
+			elseif($page=="category_management"){
+				include_once("Category_Management.php");
+			}
+			elseif($page=="product_management"){
+				include_once("Product_Management.php");
+			}
+			else if($page=="update_category"){
+				include_once("Update_Category.php");
+			}
+			else if($page=="add_product"){
+				include_once("Add_Product.php");
+			}
+			else if($page=="update_product"){
+				include_once("Update_Product.php");
+			}
+			else if($page=="logout") {
+				include_once("Logout.php");
+			}
+			else if($page=="Add_Category") {
+				include_once("Add_Category.php");
+			}
+			else{
+			include_once("content.php");
+			}
+		}
 
-									
-								?>
-								
-								<div class="footer-bottom">
-									<div class="container">
-										<div class="row">
-											<p class="pull-left">Copyright © 2021 ATN COMPANY. All rights reserved.</p>
-										</div>
-									</div>
-								</div>
-								
-							</footer><!--/Footer-->  
-							<script src="js/jquery.js"></script>
-							<script src="js/bootstrap.min.js"></script>
-							<script src="js/jquery.scrollUp.min.js"></script>
-							<script src="js/price-range.js"></script>
-							<script src="js/jquery.prettyPhoto.js"></script>
-							<script src="js/main.js"></script>
-						</body>
-						</html>
+			
+		?>
+		
+	
+	</footer><!--/Footer-->  
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
