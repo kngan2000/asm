@@ -29,6 +29,7 @@ if (isset($_POST['search'])) {
 <body>
     <div class="container">
         <table class="table table-striped table-hover">
+            
             <thead>
                 <tr>
 
@@ -56,9 +57,7 @@ if (isset($_POST['search'])) {
                             <img src="image/<?php echo $row["image"]; ?>" style="height: 100px; width: 100px;">
                         </td>
                         <td><?php echo $row["description"]; ?></td>
-                        <td>
-                            <button><a href="">Buy Now</a></button>
-                        </td>
+                        
                     </tr>
                 <?php $id++;
                 } ?>

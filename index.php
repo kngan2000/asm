@@ -123,12 +123,14 @@ include_once("connection.php");
 								
 						</div>
 						<div class="container">
-		
+						<form action="Search_Product.php" method="POST">
 						<div class="col-sm-3  pull-right">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input type="text" name="txtSearch" placeholder="Search"/>
+							
 						</div>
-					</div>
+						</div>
+						</form>
 				</div>
 			</div>
 		</div><!--/header-bottom-->
