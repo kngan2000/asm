@@ -111,11 +111,12 @@ include_once("connection.php");
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.php">Home</a></li>
-								<li class="dropdown"><a href="?page=men_fashion">Shop</a>
-								</li>
+								
 								<?php
 								if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) {
 								?>
+								<li class="dropdown"><a href="?page=men_fashion">Shop</a>
+								</li>
 									<li class="dropdown"><a href="#">Product<i class="fa fa-angle-down"></i></a>
 										<ul role="menu" class="sub-menu">
 											<li><a href="?page=add_product">Add Product</a></li>
@@ -132,9 +133,7 @@ include_once("connection.php");
 								<?php
 								} else {
 								?>
-									<li class="nav-item">
-										<a class="nav-link" href="?page=pronew">Product New</a>
-									</li>
+										<li class="nav-item"><a href="?page=men_fashion">Shop</a></li>
 								<?php
 								}
 								?>
