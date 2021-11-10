@@ -180,6 +180,13 @@ include_once("connection.php");
 
 			
 		?>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2021 ATN COMPANY. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
 		
 	
 	</footer><!--/Footer-->  
