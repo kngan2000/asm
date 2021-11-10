@@ -63,9 +63,6 @@ include_once("connection.php");
 					<div class="col-sm-8 pull-right">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<?php
-                              	if(isset($_SESSION['username']) && $_SESSION['username'] != "") {
-                            	?>
                                  <li><a class="tm-nav-link" href="?page=update_customer"><i class="fa fa-user"></i>Hi,&nbsp;<?php echo $_SESSION['username'];?> </a> 
                                 </li>
                               </li>
@@ -106,7 +103,7 @@ include_once("connection.php");
 								<li class="dropdown"><a href="?page=men_fashion">Shop<i class="fa fa-angle-down"></i></a>
                                 </li> 
 								<?php
-								if (isset($_SESSION['user_name']) && $_SESSION['admin'] == 1) {
+								if (isset($_SESSION['username']) && $_SESSION['admin'] == 1) {
 								?>
 								<li class="dropdown"><a href="#">Product<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
