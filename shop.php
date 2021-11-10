@@ -2,6 +2,7 @@
     include_once("connection.php");
 ?>
 <body>
+    <div class="container">
     <table width="500" border="1" >
         <tr>
                 <th><strong>Product Name</strong></th>
@@ -30,4 +31,5 @@
             <?php $id++;}?>
             </tbody>
     </table>
+    </div>
 </body>
