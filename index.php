@@ -162,6 +162,9 @@ include_once("connection.php");
 			include_once("Register.php");
 		} elseif ($page == "login") {
 			include_once("Login.php");
+		}
+		else if ($page == "shop") {
+			include_once("shop.php");
 		} elseif ($page == "search") {
 			include_once("Search_Product.php");
 		} elseif ($page == "category_management") {
@@ -177,11 +180,10 @@ include_once("connection.php");
 		} else if ($page == "logout") {
 			include_once("Logout.php");
 		} else if ($page == "Add_Category") {
-include_once("Add_Category.php");
+		include_once("Add_Category.php");
 		} else {
 			include_once("content.php");
 		}
-	}
 
 
 	?>
