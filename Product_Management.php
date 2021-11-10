@@ -26,7 +26,9 @@
               <td><?php echo $row["price"];?></td>
               <td><?php echo $row["quantity"];?></td>
               <td><?php echo $row["categoryid"];?></td>
-              <td><?php echo $row["image"];?></td>
+              <td>
+                    <img src="image/<?php echo $row["image"]; ?>" style="height: 100px; width: 100px;">
+              </td>
               <td><?php echo $row["shortdes"];?></td>
             </tr>
             <?php $id++;}?>
