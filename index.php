@@ -162,8 +162,7 @@ include_once("connection.php");
 			include_once("Register.php");
 		} elseif ($page == "login") {
 			include_once("Login.php");
-		}
-		else if ($page == "shop") {
+		}else if ($page == "shop") {
 			include_once("shop.php");
 		} elseif ($page == "search") {
 			include_once("Search_Product.php");
@@ -184,6 +183,7 @@ include_once("connection.php");
 		} else {
 			include_once("content.php");
 		}
+	}
 
 
 	?>
