@@ -51,7 +51,7 @@
 			</div>
 </body>
 <?php
-if (isset($_POST['search'])) {
+if (isset($_POST['txtSearch'])) {
 
     //Nhúng file kết nối với database
     include_once('connection.php');
@@ -59,13 +59,12 @@ if (isset($_POST['search'])) {
     //Lấy dữ liệu từ file 
     $search   = $_POST['txtSearch'];
 
-    $result = pg_query($conn, "SELECT productname,price,quantity,categoryid,image,description FROM public.product WHERE productname LIKE '%{$search}%'");
+    $result = pg_query($conn, "SELECT productname,price,quantity,categoryid,image,shortdes FROM public.product WHERE productname LIKE '%{$search}%'");
 
     if ($result) {
         echo "Search with keyword: $search";
-        echo '<meta http-equiv="refresh" content="0;URL=?page=category"/>';
     } else
-        echo "Có lỗi xảy ra trong quá trình tìm kiếm. <a href='?page=add_category'>Again</a>";
+        echo "Có lỗi xảy ra trong quá trình tìm kiếm.";
 }
 ?>
 <!DOCTYPE html>
@@ -108,7 +107,7 @@ if (isset($_POST['search'])) {
                         <td>
                             <img src="image/<?php echo $row["image"]; ?>" style="height: 100px; width: 100px;">
                         </td>
-                        <td><?php echo $row["description"]; ?></td>
+                        <td><?php echo $row["shortdes"]; ?></td>
 
                     </tr>
                 <?php $id++;

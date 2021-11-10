@@ -20,7 +20,7 @@ if (isset($_POST['btnAdd'])) {
     copy($proimage['tmp_name'], "image/" . $proimage['name']);
     $filePic = $proimage['name'];
     $result = pg_query($conn, "INSERT INTO public.product(productid,productname,price,quantity,categoryid,image,shortdes)
-    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$proimage}','{$description}')"); 
+    VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$filePic}','{$description}')"); 
 
     if ($result) {
         echo "Quá trình thêm mới thành công.";
