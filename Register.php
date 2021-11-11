@@ -8,21 +8,21 @@ if (isset($_POST['submit'])) {
 
 
     //Lấy dữ liệu từ file dangky.php
-    $username   = addslashes($_POST['username']);
-    $password   = addslashes($_POST['password']);
-    $fullname   = addslashes($_POST['fullname']);
-    $email      = addslashes($_POST['email']);
-    $address    = addslashes($_POST['address']);
-    $telephone  = addslashes($_POST['telephone']);
+    $username   = $_POST['username'];
+    $password   = $_POST['password'];
+    $fullname   = $_POST['fullname'];
+    $email      = $_POST['email'];
+    $address    = $_POST['address'];
+    $telephone  = $_POST['telephone'];
 
     $result = pg_query($conn, "INSERT INTO public.user(username,password,fullname,email,address,telephone,state) 
     VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$address}','{$telephone}',0)");
 
     if ($result) {
-        echo "Quá trình đăng ký thành công.";
+        echo "Successfully!";
 
     } else
-        echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
+        echo "Erorr!. <a href='index.php'>Thử lại</a>";
 }
 ?>
 

@@ -23,7 +23,7 @@ if (isset($_POST['btnAdd'])) {
     VALUES({$proid},'{$proname}','{$price}','{$quantity}',{$procate},'{$filePic}','{$description}')"); 
 
     if ($result) {
-        echo "Quá trình thêm mới thành công.";
+        echo "Successfully!.";
 
     } else
         echo "Có lỗi xảy ra trong quá trình thêm mới. <a href='?page=add_product'>Again</a>";

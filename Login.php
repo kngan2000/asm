@@ -6,8 +6,8 @@ if (isset($_POST['submit'])) {
     include_once('connection.php');
 
     //Lấy dữ liệu nhập vào
-    $username = addslashes($_POST['username']);
-    $password = addslashes($_POST['password']);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     //Kiểm tra tên đăng nhập có tồn tại không
     $result = pg_query($conn, "SELECT username, password, state FROM public.user WHERE username='{$username}'");

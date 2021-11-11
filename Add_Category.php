@@ -8,16 +8,16 @@ if (isset($_POST['submit'])) {
 
 
     //Lấy dữ liệu từ file dangky.php
-    $cateid   = addslashes($_POST['txtcategoryid']);
-    $catename   = addslashes($_POST['txtcategoryname']);
-    $des       = addslashes($_POST['txtdescription']);
+    $cateid     = $_POST['txtcategoryid'];
+    $catename   = $_POST['txtcategoryname'];
+    $des        = $_POST['txtdescription'];
     $result = pg_query($conn, "INSERT INTO public.category(categoryid,categoryname,description) VALUES ({$cateid},'{$catename}','{$des}')");
 
     if ($result) {
-        echo "Quá trình đăng ký thành công.";
+        echo "Successfully!.";
 
     } else
-        echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
+        echo "Erorr!. <a href='index.php'>Thử lại</a>";
 }
 ?>
 <!DOCTYPE html>
