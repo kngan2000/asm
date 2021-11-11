@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     include_once('connection.php');
 
 
-    //Lấy dữ liệu từ file dangky.php
+    //Lấy dữ liệu
     $cateid     = $_POST['txtcategoryid'];
     $catename   = $_POST['txtcategoryname'];
     $des        = $_POST['txtdescription'];

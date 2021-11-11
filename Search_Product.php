@@ -64,7 +64,7 @@ if (isset($_POST['txtSearch'])) {
     if ($result) {
         echo "Search with keyword: $search";
     } else
-        echo "Có lỗi xảy ra trong quá trình tìm kiếm.";
+        echo "Erorr!.";
 }
 ?>
 <!DOCTYPE html>

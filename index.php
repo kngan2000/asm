@@ -144,7 +144,7 @@ include_once("connection.php");
 								<div class="col-sm-3  pull-right">
 									<div class="search_box pull-right">
 										<input type="text" name="txtSearch" placeholder="Search" />
-										<button class="btn btn-success search" type="submit" name="search" style=" background-color: #e97a3a; border-color: #ffffff;">Search</button>
+										<button class="btn btn-success search" type="submit" name="search" style=" background-color: #; border-color: #ffffff;">Search</button>
 									</div>
 								</div>
 							</form>
